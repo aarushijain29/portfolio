@@ -1,243 +1,521 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Aarushi Jain</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarushi Jain</title>
+    <meta name="description" content="Aarushi Jain — Data Scientist at Bell. University of Waterloo CS. ML, NLP, and financial technology.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --serif: 'EB Garamond', 'Garamond', 'Georgia', serif;
+            --sans: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', 'Segoe UI', sans-serif;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        body {
+            --accent: #bc549d;
+            --accent-hover: #d46fb5;
+            --text: #ededed;
+            --text-secondary: #8a8585;
+            --bg: #1c1a1a;
+            --bg-alt: #242121;
+            --rule: rgba(255,255,255,0.1);
+            --nav-bg: rgba(28,26,26,0.92);
+            --nav-bg-mobile: rgba(36,33,33,0.97);
+            --bullet: #bc549d;
+            --selection-bg: #bc549d;
+            --selection-text: #ffffff;
+        }
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="aboutme.html" class="logo"><strong>Aarushi Jain</strong></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+        body.light {
+            --accent: #bc549d;
+            --accent-hover: #a8488b;
+            --text: #1a1a1a;
+            --text-secondary: #555555;
+            --bg: #ffffff;
+            --bg-alt: #faf8f9;
+            --rule: #e0d6dc;
+            --nav-bg: rgba(255,255,255,0.92);
+            --nav-bg-mobile: rgba(255,255,255,0.97);
+            --bullet: #bc549d;
+            --selection-bg: #bc549d;
+            --selection-text: #ffffff;
+        }
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="aboutme.html">About Me</a></li>
-							<li><a href="https://drive.google.com/file/d/1sHTq6MuYBtxoVApoTzCcr7Tq7ysmTe8J/view?usp=sharing">Resume</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Projects</a></li>
-						</ul>
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://twitter.com/aarushijain07" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://github.com/aarushijain29" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/aarushijain2907" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-						</div>
-					</nav>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 18px; }
 
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>Hi, my name is Aarushi Jain</h1>
-							</header>
-							<div class="content">
-								<p>Data Analyst well versed in Python, SQL, Tableau and Power BI</p>
-								<ul class="actions">
-									<li><a href="#one" class="button next scrolly">View my projects</a></li>
-								</ul>
-							</div>
-							
-						</div>
-					</section>
+        body {
+            font-family: var(--serif);
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            transition: background 0.4s, color 0.4s;
+            cursor: none;
+        }
 
-				<!-- Main -->
-					<div id="main">
+        ::selection { background: var(--selection-bg); color: var(--selection-text); }
 
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://public.tableau.com/app/profile/aarushi3449/viz/CovidDashboard_16277623245920/Dashboard1#1" class="link">COVID-19 Data Exploration</a></h3>
-										<p>Data Exploration of COVID-19 Data in SQL Server</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/aarushijain29/housing_data" class="link">Data Cleaning in SQL</a></h3>
-										<p>Data Cleaning of Nashville Housing Data in SQL Server</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://devpost.com/software/incipere-3ybqi6" class="link">Incepere - A Stock Trading Bot</a></h3>
-										<p>A profitable quantitative trading algorithm written in Python that shortlists a list of “ideal” stocks and generates trigger points to buy and sell the stocks by performing</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/aarushijain29/Breast-Cancer-Detection" class="link">Breast Cancer Detection</a></h3>
-										<p>A Machine Learning Algorithm trained using the breast cancer Wisconsin dataset that predicts whether a patient has breast cancer or not after considering thirty parameters of a tumor as entered by the user</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/aarushijain29/freecodecamp/tree/main/data-analysis-with-python/mean-var-std-calc" class="link">Mean-Variance Standard Deviation Calculator</a></h3>
-										<p>A function that uses Numpy to output the mean, variance, standard deviation, max, min, and sum of the rows, columns, and elements in a 3 x 3 matrix</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/aarushijain29/freecodecamp/tree/main/data-analysis-with-python/demographic-data-analyzer" class="link">Demographic Data Analyzer</a></h3>
-										<p>Analysis of a dataset of demographic data that was extracted from the 1994 Census database</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/aarushijain29/freecodecamp/tree/main/data-analysis-with-python/page-view-time-series-visualizer" class="link">Page View Time Series Visualizer</a></h3>
-										<p>Visualization of time series dataset containing the number of page views each day on the freeCodeCamp.org forum from 2016-05-09 to 2019-12-03 to understand the patterns in visits and identify yearly and monthly growth</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/aarushijain29/freecodecamp/tree/main/data-analysis-with-python/medical-data-visualizer" class="link">Medical Data Visualizer</a></h3>
-										<p>Visualization and calculations made from medical examination data using matplotlib, seaborn, and pandas</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/aarushijain29/freecodecamp/tree/main/data-analysis-with-python/sea-level-predictor" class="link">Sea Level Predictor</a></h3>
-										<p>Analysis of a dataset of the global average sea level change since 1880 to predict the sea level change through year 2050</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/aarushijain29/freecodecamp/blob/main/algorithmic-trading-python/starter_files/001_equal_weight_S%26P_500.ipynb" class="link">Equal-Weight S&P 500 Index Fund</a></h3>
-										<p>a Python script that accepts the value of your portfolio and returns the number of shares of each S&P 500 constituent you should purchase to get an equal-weight version of the index fund</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/aarushijain29/freecodecamp/blob/main/algorithmic-trading-python/starter_files/002_quantitative_momentum_strategy.ipynb" class="link">Quantitative Momentum Investing Strategy</a></h3>
-										<p>An investing strategy that selects the 50 stocks with the highest price momentum to recommend trades for an equal-weight portfolio of these 50 stocks</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/aarushijain29/freecodecamp/blob/main/algorithmic-trading-python/starter_files/003_quantitative_value_strategy.ipynb" class="link">Quantitative Value Investing Strategy</a></h3>
-										<p>An investing strategy that selects the 50 stocks with the best value metrics to recommend trades for an equal-weight portfolio of these 50 stocks</p>
-									</header>
-								</article>
-							</section>
+        a { color: var(--accent); text-decoration: none; transition: color 0.2s; cursor: none; }
+        a:hover { color: var(--accent-hover); }
+        a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-						<!-- Two -->
-							<section id="two">
-								<div class="inner">
-									<header class="major">
-										<h2>About me</h2>
-									</header>
-									<p>Currently a computer science student at the University of Waterloo, I aspire to be a Data Scientist. Computers and Mathematics have always been my areas of interest.
-									I possess excellent understanding and proficiency of platforms for effective data analyses, including SQL, Google Sheets, Excel, Tableau and R as well as strong communication, organizational and analytical skills. I also possess knowledge of the following Python libraries: Pandas, NumPy, Matplotlib, Seaborn and Keras.</p>
-									<ul class="actions">
-										<li><a href="aboutme.html" class="button next scrolly">More about me</a></li>
-									</ul>
-								</div>
-							</section>
+        /* ── CUSTOM CURSOR ── */
+        .cursor {
+            position: fixed;
+            width: 32px; height: 32px;
+            border: 1.5px solid var(--accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s ease, height 0.2s ease, background 0.2s ease, opacity 0.3s;
+            opacity: 0;
+        }
+        .cursor.visible { opacity: 1; }
+        .cursor.hover { width: 48px; height: 48px; background: rgba(188,84,157,0.12); }
 
-					</div>
+        /* ── NAV ── */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: var(--nav-bg);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--rule);
+            transition: box-shadow 0.3s, background 0.4s;
+        }
+        nav.scrolled { box-shadow: 0 1px 12px rgba(0,0,0,0.1); }
+        nav .nav-inner { max-width: 900px; margin: 0 auto; padding: 0.6rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+        nav .nav-name { font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); font-weight: 600; text-decoration: none; }
+        nav .nav-right { display: flex; align-items: center; gap: 1.6rem; }
+        nav .nav-links { display: flex; gap: 1.6rem; list-style: none; }
+        nav .nav-links a { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; position: relative; }
+        nav .nav-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: var(--accent); transition: width 0.3s; }
+        nav .nav-links a:hover { color: var(--accent); opacity: 1; }
+        nav .nav-links a:hover::after { width: 100%; }
 
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										a243jain@uwaterloo.ca
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>+1 (647) 676-8132</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>University of Waterloo<br />
-										Waterloo, ON N2L 3E7<br />
-										Canada</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
+        .theme-toggle {
+            background: none; border: 1px solid var(--rule); border-radius: 50%;
+            width: 30px; height: 30px; cursor: none; font-size: 0.85rem;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--text); transition: border-color 0.3s, color 0.3s, transform 0.5s ease; flex-shrink: 0;
+        }
+        .theme-toggle:hover { border-color: var(--accent); }
+        .theme-toggle.spin { transform: rotate(360deg); }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://twitter.com/aarushijain07" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://github.com/aarushijain29" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/aarushijain2907" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-						</div>
-					</footer>
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.3rem; }
+        .hamburger span { display: block; width: 20px; height: 2px; background: var(--text); margin: 4px 0; transition: 0.3s; }
 
-			</div>
+        /* ── HERO ── */
+        .hero { padding: 8rem 1.5rem 4rem; max-width: 900px; margin: 0 auto; }
+        .hero h1 {
+            font-family: var(--sans); font-size: 2.6rem; font-weight: 400;
+            letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+            margin-bottom: 0.6rem; animation: heroIn 0.8s ease both;
+        }
+        .hero .tagline { font-size: 1.15rem; color: var(--text-secondary); max-width: 600px; margin-bottom: 1.5rem; animation: heroIn 0.8s 0.15s ease both; }
+        .hero .contact-line { font-size: 0.88rem; color: var(--text-secondary); animation: heroIn 0.8s 0.3s ease both; }
+        .hero .contact-line .sep { margin: 0 0.4rem; color: var(--rule); }
+        @keyframes heroIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        /* ── SECTIONS ── */
+        section { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; }
+        section.alt-bg { background: var(--bg-alt); max-width: 100%; transition: background 0.4s; }
+        section.alt-bg > .section-inner { max-width: 900px; margin: 0 auto; }
 
-	</body>
+        .section-label { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 1.8rem; padding-bottom: 0.5rem; border-bottom: 1.5px solid var(--accent); display: inline-block; }
+
+        /* ── SCROLL REVEAL ── */
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ── ABOUT ── */
+        .about-text { font-size: 1.05rem; max-width: 680px; color: var(--text); }
+        .about-text p + p { margin-top: 1rem; }
+
+        /* ── EXPERIENCE ── */
+        .exp-entry { margin-bottom: 2.4rem; }
+        .exp-entry:last-child { margin-bottom: 0; }
+        .exp-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.15rem; }
+        .exp-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; }
+        .exp-dates { font-size: 0.88rem; color: var(--text-secondary); white-space: nowrap; }
+        .exp-company { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.6rem; }
+        .exp-bullets { list-style: none; padding: 0; }
+        .exp-bullets li { position: relative; padding-left: 1rem; margin-bottom: 0.4rem; font-size: 0.95rem; }
+        .exp-bullets li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 4px; height: 4px; border-radius: 50%; background: var(--bullet); transition: background 0.4s; }
+
+        /* ── SKILLS ── */
+        .skills-group { margin-bottom: 1.2rem; }
+        .skills-group:last-child { margin-bottom: 0; }
+        .skills-category { font-weight: 700; font-size: 0.95rem; }
+        .skills-list { font-size: 0.95rem; color: var(--text-secondary); }
+
+        .project-entry { margin-bottom: 2rem; }
+        .project-entry:last-child { margin-bottom: 0; }
+
+        .edu-degree { font-weight: 700; font-size: 1.1rem; }
+        .edu-school { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.4rem; }
+        .edu-details { font-size: 0.92rem; color: var(--text-secondary); }
+
+        .leadership-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2.5rem; }
+        .leadership-item { font-size: 0.95rem; }
+        .leadership-role { font-weight: 700; }
+        .leadership-org { color: var(--text-secondary); font-size: 0.88rem; }
+
+        /* ── BEYOND WORK ── */
+        .facts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2.2rem; }
+
+        .fact-card {
+            border: 1px solid var(--rule); border-radius: 6px;
+            padding: 1rem 1.1rem; font-size: 0.92rem;
+            transition: border-color 0.3s, transform 0.15s ease, box-shadow 0.3s;
+            transform-style: preserve-3d; will-change: transform;
+        }
+        .fact-card:hover { border-color: var(--accent); }
+
+        .fact-label { font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.35rem; }
+        .fact-value { color: var(--text); line-height: 1.45; }
+
+        .interests-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .interest-tag {
+            font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.04em;
+            padding: 0.35rem 0.85rem; border: 1px solid var(--rule); border-radius: 100px;
+            color: var(--text-secondary); transition: border-color 0.3s, color 0.3s, transform 0.2s;
+        }
+        .interest-tag:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
+
+        /* ── TIRAMISU EASTER EGG ── */
+        .tiramisu-trigger { cursor: none; transition: color 0.2s; }
+        .tiramisu-trigger:hover { color: var(--accent); }
+        .falling-piece {
+            position: fixed; pointer-events: none; z-index: 9998; font-size: 1.3rem;
+            animation: fall linear forwards;
+        }
+        @keyframes fall {
+            0% { opacity: 1; transform: translateY(-20px) rotate(0deg) scale(1); }
+            80% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(100vh) rotate(420deg) scale(0.6); }
+        }
+
+        /* ── FOOTER ── */
+        footer { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem; border-top: 1.5px solid var(--rule); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; }
+        footer .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+        footer .footer-links a { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); }
+        footer .footer-links a:hover { color: var(--accent); }
+        footer .footer-copy { font-size: 0.78rem; color: var(--text-secondary); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 700px) {
+            html { font-size: 16px; }
+            .hero h1 { font-size: 1.8rem; letter-spacing: 0.08em; }
+            .hero { padding: 6.5rem 1.2rem 3rem; }
+            section { padding: 2.2rem 1.2rem; }
+            .exp-header { flex-direction: column; }
+            .leadership-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .facts-grid { grid-template-columns: 1fr; }
+            nav .nav-links { display: none; }
+            nav .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--nav-bg-mobile); backdrop-filter: blur(12px); padding: 1rem 1.5rem; gap: 0.8rem; border-bottom: 1px solid var(--rule); }
+            .hamburger { display: block; }
+            footer { flex-direction: column; text-align: center; }
+            .cursor { display: none !important; }
+            body, a, .theme-toggle, .tiramisu-trigger { cursor: auto !important; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, .reveal, .hero h1, .hero .tagline, .hero .contact-line { animation: none !important; transition: none !important; }
+            .reveal { opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<nav id="nav">
+    <div class="nav-inner">
+        <a href="#" class="nav-name">Aarushi Jain</a>
+        <div class="nav-right">
+            <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#beyond">Beyond</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button>
+        </div>
+    </div>
+</nav>
+
+<header class="hero" id="top">
+    <h1>Aarushi Jain</h1>
+    <p class="tagline">Data Scientist at Bell, working in fraud detection and agentic AI. University of Waterloo CS graduate with six co-op terms across capital markets, fintech, and fleet analytics.</p>
+    <p class="contact-line">
+        <a href="mailto:a243jain@uwaterloo.ca">a243jain@uwaterloo.ca</a>
+        <span class="sep">|</span>
+        <a href="https://linkedin.com/in/aarushijain2907/" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="sep">|</span>
+        Toronto, ON
+    </p>
+</header>
+
+<section id="about" class="reveal">
+    <div class="section-label">About</div>
+    <div class="about-text">
+        <p>Data scientist at Bell, working across fraud detection and agentic AI — building ML systems and designing multi-agent pipelines.</p>
+        <p>Six co-op terms prior: capital markets analytics and data automation at the Toronto Stock Exchange, AI product strategy and model validation at Questrade, and large-scale fleet analytics at Geotab. Bachelor of Computer Science from the University of Waterloo.</p>
+    </div>
+</section>
+
+<section class="alt-bg" id="experience">
+    <div class="section-inner reveal">
+        <div class="section-label">Work Experience</div>
+        <div class="exp-entry">
+            <div class="exp-header"><span class="exp-title">Data Scientist I</span><span class="exp-dates">Jan 2026 – Present</span></div>
+            <div class="exp-company">Bell · Toronto, ON</div>
+            <ul class="exp-bullets">
+                <li>Architected a multi-agent billing code classification system on Vertex AI using Gemini to supersede a drift-prone LightGBM model, lifting accuracy from 50% to 89% while eliminating retraining cycles</li>
+                <li>Engineered a multi-agent API using Gemini and BigQuery to unify 7+ enterprise tables into a single endpoint, reducing 15-minute manual workflows to seconds</li>
+                <li>Designed a Looker pipeline to track model accuracy, error rates, and request volume across 30K+ work orders in production</li>
+            </ul>
+        </div>
+        <div class="exp-entry">
+            <div class="exp-header"><span class="exp-title">Data Scientist</span><span class="exp-dates">Sep 2024 – Apr 2025</span></div>
+            <div class="exp-company">Geotab · Oakville, ON</div>
+            <ul class="exp-bullets">
+                <li>Delivered pricing insights by analysing fleet usage data in SQL and Python, supporting strategic redesign of customer plans</li>
+                <li>Built Superset dashboards by querying 2 TB of vehicle and fleet usage data, improving visibility into regional metrics</li>
+                <li>Queried and validated 30+ fleet metrics via BigQuery SQL for Geotab's high-impact transportation trends report</li>
+            </ul>
+        </div>
+        <div class="exp-entry">
+            <div class="exp-header"><span class="exp-title">Product Analyst</span><span class="exp-dates">Jan 2024 – Apr 2024</span></div>
+            <div class="exp-company">Questrade Financial Group · Toronto, ON</div>
+            <ul class="exp-bullets">
+                <li>Benchmarked AI integration strategies across 10+ competitor platforms, informing product roadmap for AI features</li>
+                <li>Evaluated and presented KPI trends and OKRs for Questrade's product portfolio to 200+ stakeholders and executives</li>
+                <li>Validated RAG pipeline outputs using RAGAs and LangChain, measuring retrieval accuracy and response faithfulness</li>
+            </ul>
+        </div>
+        <div class="exp-entry">
+            <div class="exp-header"><span class="exp-title">Software Developer</span><span class="exp-dates">Jan 2022 – Aug 2023</span></div>
+            <div class="exp-company">Toronto Stock Exchange (TMX Group) · Toronto, ON · 3 co-op terms</div>
+            <ul class="exp-bullets">
+                <li>Queried, cleaned, and analysed 20+ years of data using Python to predict future roll periods of futures and options contracts</li>
+                <li>Analysed over 400 GB of market data to compare US and Canadian options, leveraging Python, Snowflake, and Presto</li>
+                <li>Automated big data extractions using Google Sheets API, SQL, and Python, reducing manual work by 40+ hours</li>
+                <li>Developed a Google API-powered chatbot to distribute daily market data to 300+ internal and external stakeholders</li>
+                <li>Delivered weekly market analysis presentations using Tableau to 100+ stakeholders, highlighting share and volume trends</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="reveal">
+    <div class="section-label">Skills</div>
+    <div class="skills-group"><span class="skills-category">Programming Languages: </span><span class="skills-list">Python, SQL, R, C++, C</span></div>
+    <div class="skills-group"><span class="skills-category">Frameworks: </span><span class="skills-list">Pandas, NumPy, scikit-learn, XGBoost, TensorFlow, LangChain, RAGAs, SciPy, Matplotlib, Seaborn</span></div>
+    <div class="skills-group"><span class="skills-category">Tools &amp; Platforms: </span><span class="skills-list">BigQuery, Vertex AI, Snowflake, Spark, Looker, T-SQL, Airflow, AWS, GCP, Tableau, Superset, Hadoop, Apache Hive, DataHub, Git, Linux, Jira</span></div>
+    <div class="skills-group"><span class="skills-category">Spoken Languages: </span><span class="skills-list">English (full professional), Hindi (professional working), German (B1 Zertifikat, Goethe Institut)</span></div>
+</section>
+
+<section class="alt-bg" id="research">
+    <div class="section-inner reveal">
+        <div class="section-label">Research &amp; Projects</div>
+        <div class="project-entry">
+            <div class="exp-header"><span class="exp-title">Directed Reading Program</span><span class="exp-dates">May 2024 – Aug 2024</span></div>
+            <div class="exp-company">University of Waterloo · Women in Mathematics</div>
+            <ul class="exp-bullets">
+                <li>Research topic: "Synergizing Information Retrieval and Large Language Models for Retrieval-Augmented Generation"</li>
+                <li>Surveyed 30+ papers on RAG and presented findings to faculty on precision IR techniques for LLM systems</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="education" class="reveal">
+    <div class="section-label">Education</div>
+    <div class="edu-degree">Bachelor of Computer Science, Honours (Co-op)</div>
+    <div class="edu-school">University of Waterloo · Sep 2020 – Aug 2025</div>
+    <div class="edu-details" style="margin-bottom: 0.8rem;">Relevant coursework: Machine Learning, Artificial Intelligence, Data Structures &amp; Algorithms, Object-Oriented Programming, Linear Algebra, Probability, Statistics, Data-Intensive Distributed Analytics, Software &amp; Systems Security</div>
+    <div class="edu-details" style="margin-bottom: 0.8rem;">Awards: Faculty of Mathematics International Excellence Award (C$20,000, offered to 10 students in India), President's Scholarship of Distinction (C$2,000), Dean's Honours List, Term Distinction (8 terms)</div>
+    <div class="edu-details">Certifications: Google Machine Learning Engineer Professional Certificate (in progress), Google Data Analytics Professional Certificate, SQL for Data Science (UC Davis), Algorithmic Trading with Python (freeCodeCamp)</div>
+</section>
+
+<section class="alt-bg" id="leadership">
+    <div class="section-inner reveal">
+        <div class="section-label">Leadership &amp; Community</div>
+        <div class="leadership-grid">
+            <div class="leadership-item"><div class="leadership-role">Grace Hopper Celebration</div><div class="leadership-org">Attendee · Fall 2024</div></div>
+            <div class="leadership-item"><div class="leadership-role">Secretary</div><div class="leadership-org">Women in Computer Science · Winter 2024</div></div>
+            <div class="leadership-item"><div class="leadership-role">Director of Publicity</div><div class="leadership-org">Women in Computer Science · Fall 2023</div></div>
+            <div class="leadership-item"><div class="leadership-role">Mental Health Director</div><div class="leadership-org">Mathematics Society · Spring 2023</div></div>
+            <div class="leadership-item"><div class="leadership-role">Conference Volunteer</div><div class="leadership-org">TMX Equities Trading Conference · 2023</div></div>
+            <div class="leadership-item"><div class="leadership-role">President, Waterloo Chapter</div><div class="leadership-org">SoGal Foundation · Fall 2022</div></div>
+            <div class="leadership-item"><div class="leadership-role">Above &amp; Beyond CS Fellow</div><div class="leadership-org">Meta · Fall 2022</div></div>
+            <div class="leadership-item"><div class="leadership-role">Vice President</div><div class="leadership-org">UW Virtual Reality Club · Winter 2021</div></div>
+        </div>
+    </div>
+</section>
+
+<section id="beyond" class="reveal">
+    <div class="section-label">Beyond Work</div>
+    <div class="facts-grid">
+        <div class="fact-card" data-tilt>
+            <div class="fact-label">Travelled</div>
+            <div class="fact-value">11 countries and counting</div>
+        </div>
+        <div class="fact-card" data-tilt>
+            <div class="fact-label">Languages</div>
+            <div class="fact-value">English, Hindi, and a B1 in German that hasn't been used in years</div>
+        </div>
+        <div class="fact-card" data-tilt>
+            <div class="fact-label">Weak spot</div>
+            <div class="fact-value">Anything round and slightly dumb — pigeons, corgis, chonky cats</div>
+        </div>
+        <div class="fact-card" data-tilt>
+            <div class="fact-label">Comfort watch</div>
+            <div class="fact-value">The Office, Fleabag, House — on permanent rotation</div>
+        </div>
+        <div class="fact-card" data-tilt>
+            <div class="fact-label">Documentary range</div>
+            <div class="fact-value">True crime to shipwrecks to untold chess scandals</div>
+        </div>
+        <div class="fact-card" data-tilt>
+            <div class="fact-label">Non-negotiable</div>
+            <div class="fact-value">Tiramisu</div>
+        </div>
+    </div>
+    <div class="fact-label" style="margin-bottom: 0.8rem;">Interests</div>
+    <div class="interests-row">
+        <span class="interest-tag">Trying new restaurants</span>
+        <span class="interest-tag">Fitness</span>
+        <span class="interest-tag">Documentaries</span>
+        <span class="interest-tag">Travel</span>
+        <span class="interest-tag">Miffy</span>
+        <span class="interest-tag">Bob the Minion</span>
+    </div>
+</section>
+
+<footer>
+    <ul class="footer-links">
+        <li><a href="mailto:a243jain@uwaterloo.ca">Email</a></li>
+        <li><a href="https://linkedin.com/in/aarushijain2907/" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+    <span class="footer-copy">&copy; 2026 Aarushi Jain · <span class="tiramisu-trigger" id="tiramisuBtn">fueled by tiramisu</span></span>
+</footer>
+
+<script>
+    // ── CUSTOM CURSOR ──
+    const cursor = document.getElementById('cursor');
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (!isTouchDevice) {
+        let cx = 0, cy = 0, tx = 0, ty = 0;
+        document.addEventListener('mousemove', e => {
+            tx = e.clientX; ty = e.clientY;
+            if (!cursor.classList.contains('visible')) cursor.classList.add('visible');
+        });
+        document.addEventListener('mouseleave', () => cursor.classList.remove('visible'));
+
+        (function loop() {
+            cx += (tx - cx) * 0.15;
+            cy += (ty - cy) * 0.15;
+            cursor.style.left = cx + 'px';
+            cursor.style.top = cy + 'px';
+            requestAnimationFrame(loop);
+        })();
+
+        document.querySelectorAll('a, button, .fact-card, .interest-tag, .tiramisu-trigger').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        });
+    } else {
+        cursor.style.display = 'none';
+        document.body.style.cursor = 'auto';
+        document.querySelectorAll('a, button, .tiramisu-trigger').forEach(el => el.style.cursor = 'auto');
+    }
+
+    // ── CARD TILT ──
+    document.querySelectorAll('[data-tilt]').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width - 0.5;
+            const y = (e.clientY - r.top) / r.height - 0.5;
+            card.style.transform = `perspective(600px) rotateX(${-y * 8}deg) rotateY(${x * 8}deg) scale(1.02)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(600px) rotateX(0) rotateY(0) scale(1)';
+        });
+    });
+
+    // ── SCROLL REVEAL ──
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    // ── THEME TOGGLE ──
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    function setTheme(light) {
+        if (light) {
+            body.classList.add('light');
+            toggle.textContent = '\u263E';
+            toggle.setAttribute('aria-label', 'Switch to dark theme');
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.classList.remove('light');
+            toggle.textContent = '\u2600';
+            toggle.setAttribute('aria-label', 'Switch to light theme');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    const saved = localStorage.getItem('theme');
+    setTheme(saved === 'light');
+
+    toggle.addEventListener('click', () => {
+        toggle.classList.add('spin');
+        setTimeout(() => toggle.classList.remove('spin'), 500);
+        setTheme(!body.classList.contains('light'));
+    });
+
+    // ── NAV ──
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'));
+    });
+
+    // ── TIRAMISU EASTER EGG ──
+    const desserts = ['\uD83C\uDF70', '\uD83C\uDF82', '\u2615', '\uD83C\uDF6B', '\uD83E\uDDC1', '\uD83C\uDF69'];
+    document.getElementById('tiramisuBtn').addEventListener('click', () => {
+        for (let i = 0; i < 20; i++) {
+            const piece = document.createElement('div');
+            piece.className = 'falling-piece';
+            piece.textContent = desserts[Math.floor(Math.random() * desserts.length)];
+            piece.style.left = Math.random() * 100 + 'vw';
+            piece.style.animationDuration = (1.5 + Math.random() * 2) + 's';
+            piece.style.animationDelay = Math.random() * 0.6 + 's';
+            document.body.appendChild(piece);
+            setTimeout(() => piece.remove(), 4000);
+        }
+    });
+</script>
+</body>
 </html>
